@@ -20,7 +20,7 @@
     --clr-accent: #ADD8E6;
     
     --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
+    --fs-h2: 2rem;
     --fs-h3: 1.25rem;
   
     --fs-body: 1rem;
@@ -157,8 +157,9 @@ header {
     color: var(--clr-light);
     top: 0;
     bottom:0;
-    left: 0;
+    left: 50%;
     right:0;
+    width: 50%;
     z-index: 100; /* pulls it in front of everything else*/
     
     transform: translateX(100%); /* moves it over based on its own width, 100% moves it off entirely*/
@@ -182,7 +183,7 @@ header {
     color: inherit;
     font-weight: var(--fw-bold);
     font-size: var(--fs-h2);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .nav__link:hover {
@@ -190,12 +191,14 @@ header {
 }
 
 .nav-toggle {
-    padding: 0.5em;
-    background: transparent;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    background: var(--clr-light);
     border: 0;
     cursor: pointer;
     /*keeps the padding the same all around*/
-    position: absolute;
+    position: fixed;
     right: 1em;
     top: 1em;
     z-index: 1000; /*make sure its at the very very top of the page at all time*/
@@ -207,6 +210,7 @@ header {
 
 .nav-open .nav-toggle {
     position: fixed; /* only want it fixed when we are inside the navigation toggle*/
+    background: transparent;
 }
 
 
